@@ -1,0 +1,19 @@
+psql -d retailmart -U postgres -f 01_create/02_create_analytics_schema.sql 
+psql -d retailmart -U postgres -f 01_setup/02_create_metadata_tables.sql 
+psql -d retailmart -U postgres -f 01_setup/03_create_indexes.sql 
+
+psql -d retailmart -U postgres -f 02_data_quality/data_quality_checks.sql 
+
+psql -d retailmart -U postgres -f 03_kpi_queries/01_sales_analytics.sql 
+psql -d retailmart -U postgres -f 03_kpi_queries/02_customer_analytics.sql 
+psql -d retailmart -U postgres -f 03_kpi_queries/03_product_analytics.sql 
+psql -d retailmart -U postgres -f 03_kpi_queries/04_store_analytics.sql 
+ psql -d retailmart -U postgres -f 03_kpi_queries/04_store_analytics.sql
+ psql -d retailmart -U postgres -f 03_kpi_queries/05_operations_analytics.sql 
+psql -d retailmart -U postgres -f 03_kpi_queries/06_marketing_analytics.sql
+
+psql -d retailmart -U postgres -f 04_alerts/business_alerts.sql 
+
+psql -d retailmart -U postgres -f 05_refresh/refresh_all_analytics.sql
+chmod +x 05_refresh/export_all_json.sh
+./05_refresh/export_all_json.sh
