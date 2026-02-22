@@ -12,7 +12,8 @@
 // ============================================================================
 
 const CONFIG = {
-  dataPath: "./data",
+  // Use relative path that works for both local and Vercel
+  dataPath: "data", 
   refreshInterval: 300000, // 5 minutes
   chartColors: {
     primary: "#2563eb",
@@ -104,6 +105,11 @@ const Utils = {
     return Array.isArray(data) ? data : [];
   },
 
+  // Safe object access
+  safeObject(data) {
+    return data && typeof data === 'object' ? data : {};
+  },
+
   // Create badge HTML
   createBadge(text, type = "info") {
     return `<span class="badge badge-${type}">${text}</span>`;
@@ -182,7 +188,7 @@ const DataLoader = {
       ]);
 
       state.data = {
-        executiveSummary,
+        executiveSummary: Utils.safeObject(executiveSummary),
         monthlyTrend: Utils.safeArray(monthlyTrend),
         recentTrend: Utils.safeArray(recentTrend),
         dayOfWeek: Utils.safeArray(dayOfWeek),
@@ -204,7 +210,7 @@ const DataLoader = {
         returns,
         campaigns: Utils.safeArray(campaigns),
         channels: Utils.safeArray(channels),
-        alerts,
+        alerts: Utils.safeObject(alerts),
       };
 
       console.log("Data loaded successfully");
