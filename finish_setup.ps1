@@ -106,4 +106,7 @@ Export-Json "analytics.get_campaign_performance_json" "marketing/campaigns.json"
 Export-Json "analytics.get_channel_performance_json" "marketing/channels.json" "Channel Performance"
 Export-Json "analytics.get_email_engagement_json" "marketing/email.json" "Email Performance"
 
+# Alerts
+Export-Json "analytics.get_all_alerts_json" "alerts.json" "Active Alerts"
+
 Write-Host "Finish Setup Completed!" -ForegroundColor Green
