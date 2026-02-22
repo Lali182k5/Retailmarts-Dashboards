@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "retailmart_analytics/06_dashboard/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/retailmart_analytics/06_dashboard/$1"
+    }
+  ]
+}
