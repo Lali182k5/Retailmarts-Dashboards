@@ -71,10 +71,10 @@ retailmart_analytics_project/
 
 1. **Clone the repository**
 
-   ```bash
-   git clone https://github.com/yourusername/retailmart-analytics.git
-   cd retailmart-analytics
-   ```
+```bash
+git clone https://github.com/Lali182k5/Retailmart-Analytics-Platform.git
+cd Retailmart-Analytics-Platform
+```
 
 2. **Create the RetailMart database** (if not exists)
 
@@ -250,7 +250,19 @@ This project demonstrates mastery of:
 - ✅ Production deployment practices
 
 
+## 👥 Contributors
 
+This project was built collaboratively by:
+
+- **Likhitha Sai Edupalli ([@Lali182k5](https://github.com/Lali182k5))** — Interactive dashboard (UI), frontend integration, deployment to production (Vercel) 
+- **Venkatesh Ravva ([@Venkatesh-3304](https://github.com/Venkatesh-3304))** — PostgreSQL/PLpgSQL analytics layer, views/materialized views, refresh logic, data-quality checks, documentation
+
+
+## 🙌 Credits
+
+If you use or reference this project, please credit both contributors:
+- @Lali182k5
+- @Venkatesh-3304
 
 ---
 
